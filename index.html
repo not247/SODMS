@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secure Offline Data Management System</title>
     <style>
-      body {
+        body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #ffffff; /* Light mode background */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
         }
         h1 {
             color: #2c3e50;
@@ -23,30 +25,58 @@
             padding-left: 20px;
         }
         .highlight {
-            color: #27ae60;
+            color: #27ae60; /* Green color */
             border: 2px solid #27ae60;
             padding: 10px;
-            background-color: #e8f8e8;
+            background-color: #e8f8e8; /* Light green background */
+        }
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #2c3e50; /* Dark mode background */
+            color: #ecf0f1; /* Light text color */
+        }
+        body.dark-mode h1, body.dark-mode h2 {
+            color: #ecf0f1; /* Light text color for headings */
+        }
+        body.dark-mode .highlight {
+            background-color: #34495e; /* Darker highlight for dark mode */
+            border-color: #27ae60; /* Keep the highlight border color */
+        }
+        button {
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #219150;
         }
     </style>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XNRF72HKBJ"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      gtag('config', 'G-XNRF72HKBJ');
+        gtag('config', 'G-XNRF72HKBJ');
+
+        // Dark mode toggle function
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
     </script>
 </head>
 <body>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
     <h1>Secure Offline Data Management System</h1>
-
     <h2>Current Status and Future Plans</h2>
     <div class="highlight">
         <p>I am seeking individuals to assist in establishing a company, developing an online presence, handling marketing, addressing legal issues, and securing investors. These efforts aim to make this innovative solution widely available.</p>
         <p>It's important to note that investment is needed for these aspects, not for app development. The system already exists as a working product-simple, easy to use, and minimalist in design.</p>
-    </div>
+    </div>    </div>
 
     <p>Contact me via my current X handle @StoPlyr or another method will be provided if the need arises via this page.</p>
 
